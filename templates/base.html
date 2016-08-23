@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Adam Matłacz</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+        <script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand"><img src="{% static 'img/me.png' %}" alt="logo" height="42" width="42"></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="menu">
+                    <li class="active"><a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                    <li>
+                        <a href="#" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-level-up"></i> Projects <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Mem generator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="glyphicon glyphicon-sunglasses"></i> Fun</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-blackboard"></i> Learning resources</a></li>
+                </ul>
+            </div>
+        </nav>
+        {% block content %}
+        {% endblock content %}
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    </body>
+</html>
