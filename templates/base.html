@@ -31,8 +31,10 @@
                             <li><a href="#">Mem generator</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="glyphicon glyphicon-sunglasses"></i> Fun</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-blackboard"></i> Learning resources</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'post_new' %}" class="top-menu"><i class="glyphicon glyphicon-plus"></i> Add post</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
