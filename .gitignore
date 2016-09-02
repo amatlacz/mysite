@@ -3,5 +3,6 @@ __pycache__
 myvenv
 devenv
 testenv
+mysite/settings/base.py
 db.sqlite3
 .DS_Store
